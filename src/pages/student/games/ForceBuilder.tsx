@@ -322,7 +322,7 @@ export default function ForceBuilder() {
 
       {/* Controls */}
       {!isFullscreen && (
-        <div className="mt-6 w-full max-w-4xl bg-white p-6 rounded-lg border border-gray-200">
+        <div className="mt-6 w-full max-w-4xl bg-card p-6 rounded-lg border border-border">
           <div className="space-y-6">
             {/* Object Selection */}
             <div className="space-y-3">
