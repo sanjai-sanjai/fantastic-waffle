@@ -134,7 +134,14 @@ export default function EquationBuilder() {
           score: prev.score + 1,
         }));
 
+        setSuccessMessage(`Atoms balanced! You've successfully balanced this equation.`);
+
         setTimeout(() => {
+          setShowSuccessPopup(true);
+        }, 800);
+
+        setTimeout(() => {
+          setShowSuccessPopup(false);
           if (gameState.currentEquationIndex < EQUATIONS.length - 1) {
             setGameState((prev) => ({
               ...prev,
@@ -148,7 +155,7 @@ export default function EquationBuilder() {
           } else {
             setShowCompletion(true);
           }
-        }, 2000);
+        }, 2800);
       }
     } else {
       setGameState((prev) => ({ ...prev, isBalanced: false, showBalanceLabel: false }));
